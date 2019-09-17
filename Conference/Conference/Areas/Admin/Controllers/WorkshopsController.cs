@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Conference.Domain.Entities;
 using Conference.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +28,9 @@ namespace Conference.Areas.Admin.Controllers
         // GET: Workshops/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Workshops model;
+            model = workshopService.GetWorkshopById(id);
+            return View(model);
         }
 
         // GET: Workshops/Create
@@ -39,47 +42,65 @@ namespace Conference.Areas.Admin.Controllers
         // POST: Workshops/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Workshops model)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                Workshops addedWorkshop = workshopService.AddWorkshop(model);
+                if (addedWorkshop==null)
+                {
+                    return View(model);
+                }
+                else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Workshops/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Workshops editedWorkshop;
+            editedWorkshop = workshopService.GetWorkshopById(id);
+            return View(editedWorkshop);
         }
 
         // POST: Workshops/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Workshops model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
+                Workshops workshopToUpdate = workshopService.GetWorkshopById(id);
+                TryUpdateModelAsync(workshopToUpdate);
+                Workshops updatedWorkshop= workshopService.UpdateWorkshop(workshopToUpdate);
+                if (updatedWorkshop != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View(model);
+                }
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Workshops/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Workshops workshopToDelete = workshopService.GetWorkshopById(id);
+            workshopService.DeleteWorkshop(workshopToDelete);
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Workshops/Delete/5
