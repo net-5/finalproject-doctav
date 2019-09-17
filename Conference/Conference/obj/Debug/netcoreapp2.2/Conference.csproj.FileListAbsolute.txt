@@ -97,3 +97,6 @@ F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Details.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Create.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Edit.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Talks\Details.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Talks\Create.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Talks\Edit.g.cshtml.cs

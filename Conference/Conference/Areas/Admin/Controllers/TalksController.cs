@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Conference.Domain.Entities;
 using Conference.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,8 @@ namespace Conference.Areas.Admin.Controllers
         // GET: Talks/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Talks talk = talkService.GetTalkById(id);
+            return View(talk);
         }
 
         // GET: Talks/Create
@@ -40,47 +42,65 @@ namespace Conference.Areas.Admin.Controllers
         // POST: Talks/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Talks model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                Talks addedTalk;
+                addedTalk = talkService.AddTalk(model);
+                if (addedTalk != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View(model);
+                }
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Talks/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Talks talkToEdit = talkService.GetTalkById(id);
+            return View(talkToEdit);
         }
 
         // POST: Talks/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Talks model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
+                Talks talkToUpdate = talkService.GetTalkById(id);
+                TryUpdateModelAsync(talkToUpdate);
+                Talks updatedTalk = talkService.UpdateTalk(talkToUpdate);
+                if(updatedTalk!=null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View(model);
+                }
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Talks/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Talks talkToDelete = talkService.GetTalkById(id);
+            talkService.DeleteTalk(talkToDelete);
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Talks/Delete/5

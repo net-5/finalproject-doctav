@@ -9,6 +9,10 @@ namespace Conference.Data
     public interface ITalksRepository
     {
         List<Talks> GetAllTalks();
+        Talks GetTalkById(int id);
+        Talks AddTalk(Talks talkToAdd);
+        Talks UpdateTalk(Talks talkToUpdate);
+        void DeleteTalk(Talks talkToDelete);
     }
     public class TalksRepository : ITalksRepository
     {
@@ -18,8 +22,37 @@ namespace Conference.Data
         {
             this.conferenceContext = conferenceContext;
         }
+
+        public Talks AddTalk(Talks talkToAdd)
+        {
+            var addedTalk = conferenceContext.Add(talkToAdd);
+            conferenceContext.SaveChanges();
+            return addedTalk.Entity;
+        }
+
+        public void DeleteTalk(Talks talkToDelete)
+        {
+            conferenceContext.Remove(talkToDelete);
+            conferenceContext.SaveChanges();
+        }
+
         public List<Talks> GetAllTalks()
         {
-            return conferenceContext.Talks.ToList();        }
+            return conferenceContext.Talks.ToList();
+        }
+
+        public Talks GetTalkById(int id)
+        {
+            Talks talk;
+            talk = conferenceContext.Talks.Find(id);
+            return talk;
+        }
+
+        public Talks UpdateTalk(Talks talkToUpdate)
+        {
+            var updatedTalk = conferenceContext.Update(talkToUpdate);
+            conferenceContext.SaveChanges();
+            return updatedTalk.Entity;
+        }
     }
 }
