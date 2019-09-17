@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Conference.Domain.Entities;
 using Conference.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,8 @@ namespace Conference.Areas.Admin.Controllers
         // GET: Speakers/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Speakers speaker = speakerService.GetSpeakerById(id);
+            return View(speaker);
         }
 
         // GET: Speakers/Create
@@ -40,47 +42,57 @@ namespace Conference.Areas.Admin.Controllers
         // POST: Speakers/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Speakers model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                Speakers addedSpeaker = speakerService.AddSpeaker(model);
+                if (addedSpeaker != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    return View(model);
+                }
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Speakers/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Speakers speakerToEdit = speakerService.GetSpeakerById(id);
+            return View(speakerToEdit);
         }
 
         // POST: Speakers/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Speakers model)
         {
-            try
+            if(ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                var existingSpeaker = speakerService.GetSpeakerById(id);
+                TryUpdateModelAsync(existingSpeaker);
+                speakerService.UpdateSpeaker(existingSpeaker);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: Speakers/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Speakers speakerToDelete = speakerService.GetSpeakerById(id);
+            speakerService.DeleteSpeaker(speakerToDelete);
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Speakers/Delete/5
