@@ -10,3 +10,15 @@ C:\Users\Octavian\source\repos\Conference\Conference.Data\obj\Debug\netstandard2
 C:\Users\Octavian\source\repos\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.csproj.CopyComplete
 C:\Users\Octavian\source\repos\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.dll
 C:\Users\Octavian\source\repos\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.pdb
+F:\Conference\finalproject-doctav\Conference\Conference.Data\bin\Debug\netstandard2.0\Conference.Data.deps.json
+F:\Conference\finalproject-doctav\Conference\Conference.Data\bin\Debug\netstandard2.0\Conference.Data.dll
+F:\Conference\finalproject-doctav\Conference\Conference.Data\bin\Debug\netstandard2.0\Conference.Data.pdb
+F:\Conference\finalproject-doctav\Conference\Conference.Data\bin\Debug\netstandard2.0\Conference.Domain.dll
+F:\Conference\finalproject-doctav\Conference\Conference.Data\bin\Debug\netstandard2.0\Conference.Domain.pdb
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.csprojAssemblyReference.cache
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.csproj.CoreCompileInputs.cache
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.AssemblyInfoInputs.cache
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.AssemblyInfo.cs
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.csproj.CopyComplete
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.dll
+F:\Conference\finalproject-doctav\Conference\Conference.Data\obj\Debug\netstandard2.0\Conference.Data.pdb

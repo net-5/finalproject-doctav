@@ -13,6 +13,7 @@ namespace Conference.Service
         Editions AddEdition(Editions edition);
         Editions GetEditionById(int id);
         Editions Update(Editions editionToUpdate);
+        void Delete(Editions editionToDelete);
     }
     public class EditionService : IEditionService
     {
@@ -29,6 +30,11 @@ namespace Conference.Service
         {
             Editions addedEdition = editionRepository.AddEdition(edition);
             return addedEdition;
+        }
+
+        public void Delete(Editions editionToDelete)
+        {
+            editionRepository.Delete(editionToDelete);
         }
 
         public List<Editions> GetAllEditions()

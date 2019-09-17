@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Data\\Conference.Data.csproj": {}
+    "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Data\\Conference.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Data\\Conference.Data.csproj": {
+    "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Data\\Conference.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Data\\Conference.Data.csproj",
+        "projectUniqueName": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Data\\Conference.Data.csproj",
         "projectName": "Conference.Data",
-        "projectPath": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Data\\Conference.Data.csproj",
+        "projectPath": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Data\\Conference.Data.csproj",
         "packagesPath": "C:\\Users\\Octavian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Data\\obj\\",
+        "outputPath": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\Conference.Domain.csproj": {
-                "projectPath": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\Conference.Domain.csproj"
+              "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\Conference.Domain.csproj": {
+                "projectPath": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\Conference.Domain.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\Conference.Domain.csproj": {
+    "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\Conference.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\Conference.Domain.csproj",
+        "projectUniqueName": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\Conference.Domain.csproj",
         "projectName": "Conference.Domain",
-        "projectPath": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\Conference.Domain.csproj",
+        "projectPath": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\Conference.Domain.csproj",
         "packagesPath": "C:\\Users\\Octavian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Octavian\\source\\repos\\Conference\\Conference.Domain\\obj\\",
+        "outputPath": "F:\\Conference\\finalproject-doctav\\Conference\\Conference.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

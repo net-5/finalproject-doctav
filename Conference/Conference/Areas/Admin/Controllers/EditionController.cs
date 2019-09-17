@@ -90,7 +90,13 @@ namespace Conference.Areas.Admin.Controllers
         // GET: Edition/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Editions editionToDelete;
+            editionToDelete = editionsService.GetEditionById(id);
+            if (editionToDelete != null)
+            {
+                editionsService.Delete(editionToDelete);
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Edition/Delete/5
