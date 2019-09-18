@@ -4721,6 +4721,15 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "ValueInjecter/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Omu.ValueInjecter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Omu.ValueInjecter.dll": {}
+        }
+      },
       "Conference.Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -12969,6 +12978,23 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "ValueInjecter/3.2.0": {
+      "sha512": "cB+YW4Jb9DRwLkAEsLZhK1mKvi5gwhPav9zMDrKaCH6CfheDcy7eJREEqshK81aP5j+48FyBeFE5PxbWwjpwYg==",
+      "type": "package",
+      "path": "valueinjecter/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Omu.ValueInjecter.dll",
+        "lib/net45/Omu.ValueInjecter.xml",
+        "lib/netstandard1.6/Omu.ValueInjecter.dll",
+        "lib/netstandard1.6/Omu.ValueInjecter.xml",
+        "lib/netstandard2.0/Omu.ValueInjecter.dll",
+        "lib/netstandard2.0/Omu.ValueInjecter.xml",
+        "valueinjecter.3.2.0.nupkg.sha512",
+        "valueinjecter.nuspec"
+      ]
+    },
     "Conference.Data/1.0.0": {
       "type": "project",
       "path": "../Conference.Data/Conference.Data.csproj",
@@ -12995,7 +13021,8 @@
       "Microsoft.EntityFrameworkCore >= 2.2.6",
       "Microsoft.Extensions.DependencyInjection >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
+      "ValueInjecter >= 3.2.0"
     ]
   },
   "packageFolders": {
@@ -13077,6 +13104,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.2.3, )"
+          },
+          "ValueInjecter": {
+            "target": "Package",
+            "version": "[3.2.0, )"
           }
         },
         "imports": [

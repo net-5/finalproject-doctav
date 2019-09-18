@@ -103,3 +103,4 @@ F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Workshops\Details.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Workshops\Create.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Workshops\Edit.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SponsorTypes\Index.g.cshtml.cs
