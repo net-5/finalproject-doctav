@@ -12,9 +12,9 @@ namespace Conference.Areas.Admin.Controllers
     [Area("Admin")]
     public class SponsorTypesController : Controller
     {
-        private readonly SponsorTypesService sponsorTypesService;
+        private readonly ISponsorTypesService sponsorTypesService;
 
-        public SponsorTypesController(SponsorTypesService sponsorTypesService)
+        public SponsorTypesController(ISponsorTypesService sponsorTypesService)
         {
             this.sponsorTypesService = sponsorTypesService;
         }
