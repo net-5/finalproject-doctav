@@ -41,7 +41,7 @@ namespace Conference.TagHelpers
                     TagRenderMode = TagRenderMode.Normal
                 };
                 myOption.Attributes.Add("value", edition.Id.ToString());   //acesta este atributul care este returnat de output-ul din TagHelper
-                myOption.InnerHtml.Append(edition.Name);
+                myOption.InnerHtml.Append(edition.Name);                    //acesta este atributul care se afiseaza in elementul "option"
                 output.Content.AppendHtml(myOption);
             }
         }
