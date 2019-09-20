@@ -79,6 +79,9 @@ F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Details.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Edit.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Speakers\Index.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Create.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Edit.g.cshtml.cs
+F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Index.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SponsorTypes\Create.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SponsorTypes\Details.g.cshtml.cs
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\SponsorTypes\Edit.g.cshtml.cs
@@ -107,6 +110,3 @@ F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Conference.csproj.CopyComplete
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Conference.dll
 F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Conference.pdb
-F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Index.g.cshtml.cs
-F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Create.g.cshtml.cs
-F:\Conference\finalproject-doctav\Conference\Conference\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Sponsors\Edit.g.cshtml.cs
