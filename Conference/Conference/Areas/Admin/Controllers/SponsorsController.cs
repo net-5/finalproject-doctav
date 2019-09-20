@@ -2,18 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Conference.Areas.Admin.Models;
+using Conference.Domain.Entities;
+using Conference.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Omu.ValueInjecter;
 
 namespace Conference.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class SponsorsController : Controller
     {
+        private readonly ISponsorsService sponsorsService;
+
+        public SponsorsController(ISponsorsService sponsorsService)
+        {
+            this.sponsorsService = sponsorsService;
+        }
+
         // GET: Sponsors
         public ActionResult Index()
         {
-            return View();
+            List<Sponsors> sponsors;
+            sponsors = sponsorsService.GetAllSponsors();
+            return View(sponsors);
         }
 
         // GET: Sponsors/Details/5
@@ -31,47 +44,76 @@ namespace Conference.Areas.Admin.Controllers
         // POST: Sponsors/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SponsorsViewModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                Sponsors sponsor = new Sponsors();
+                sponsor.InjectFrom(model);
+                Sponsors addedSponsor = sponsorsService.AddSponsors(sponsor);
+                if(addedSponsor!=null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("Name", "It seems there is an error about the entity...");
+                    return View(model);
+                }
             }
-            catch
+            else
             {
-                return View();
+                ModelState.AddModelError("Name", "It seems there is an error on the model...");
+                return View(model);
             }
         }
 
         // GET: Sponsors/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Sponsors sponsorToEdit = sponsorsService.GetSponsorById(id);
+            if(sponsorToEdit!=null)
+            {
+                SponsorsViewModel model = new SponsorsViewModel();
+                model.InjectFrom(sponsorToEdit);
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            
         }
 
         // POST: Sponsors/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, SponsorsViewModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                Sponsors sponsorToUpdate = new Sponsors();
+                sponsorToUpdate.InjectFrom(model);
+                TryUpdateModelAsync(sponsorToUpdate);
+                sponsorsService.UpdateSponsors(sponsorToUpdate);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
+                ModelState.AddModelError("Name", "It seems there is a problem with the model...");
+                return View(model);
             }
         }
 
         // GET: Sponsors/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Sponsors sponsorToDelete = sponsorsService.GetSponsorById(id);
+            if(sponsorToDelete!=null)
+            {
+                sponsorsService.DeleteSponsor(sponsorToDelete);
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: Sponsors/Delete/5
