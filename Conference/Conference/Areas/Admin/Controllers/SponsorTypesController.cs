@@ -6,6 +6,8 @@ using Conference.Domain.Entities;
 using Conference.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Conference.Areas.Admin.Models;
+using Omu.ValueInjecter;
 
 namespace Conference.Areas.Admin.Controllers
 {
@@ -30,7 +32,10 @@ namespace Conference.Areas.Admin.Controllers
         // GET: SponsorTypes/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            SponsorTypes sponsorType = sponsorTypesService.GetSponsorTypesById(id);
+            SponsorTypesViewModel model = new SponsorTypesViewModel();
+            model.InjectFrom(sponsorType);
+            return View(model);
         }
 
         // GET: SponsorTypes/Create
@@ -42,47 +47,68 @@ namespace Conference.Areas.Admin.Controllers
         // POST: SponsorTypes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(SponsorTypesViewModel model)
         {
-            try
+         if(ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
+                SponsorTypes sponsorType = new SponsorTypes();
+                sponsorType.InjectFrom(model);
+                var newSponsorType = sponsorTypesService.AddSponsorTypes(sponsorType);
+                if(newSponsorType==null)
+                {
+                    ModelState.AddModelError("Name", "Probabibly there is an error.");
+                    return View(model);
+                }
+                else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            catch
+         else
             {
-                return View();
+                return View(model);
             }
         }
 
         // GET: SponsorTypes/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            SponsorTypesViewModel model = new SponsorTypesViewModel();
+            SponsorTypes sponsorType = sponsorTypesService.GetSponsorTypesById(id);
+            model.InjectFrom(sponsorType);
+            return View(model);
         }
 
         // POST: SponsorTypes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, SponsorTypesViewModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
-
+                SponsorTypes sponsorTypes = sponsorTypesService.GetSponsorTypesById(id);
+                sponsorTypes.InjectFrom(model);
+                TryUpdateModelAsync(sponsorTypes);
+                sponsorTypesService.UpdateSponsorTypes(sponsorTypes);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            else
             {
-                return View();
+                ModelState.AddModelError("Name", "It seems there is an error...");
+                return View(model);
             }
         }
 
         // GET: SponsorTypes/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            SponsorTypes sponsorType;
+            sponsorType = sponsorTypesService.GetSponsorTypesById(id);
+            if (sponsorType != null)
+            {
+                sponsorTypesService.DeleteSponsorTypes(sponsorType);
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: SponsorTypes/Delete/5
