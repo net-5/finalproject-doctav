@@ -11,7 +11,6 @@ F:\Conference\finalproject-doctav\Conference\Conference.Domain\bin\Debug\netstan
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\bin\Debug\netstandard2.0\Conference.Domain.dll
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\bin\Debug\netstandard2.0\Conference.Domain.pdb
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\obj\Debug\netstandard2.0\Conference.Domain.csprojAssemblyReference.cache
-F:\Conference\finalproject-doctav\Conference\Conference.Domain\obj\Debug\netstandard2.0\Conference.Domain.csproj.CoreCompileInputs.cache
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\obj\Debug\netstandard2.0\Conference.Domain.AssemblyInfoInputs.cache
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\obj\Debug\netstandard2.0\Conference.Domain.AssemblyInfo.cs
 F:\Conference\finalproject-doctav\Conference\Conference.Domain\obj\Debug\netstandard2.0\Conference.Domain.dll

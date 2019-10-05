@@ -20,7 +20,6 @@ F:\Conference\finalproject-doctav\Conference\Conference.Service\bin\Debug\netsta
 F:\Conference\finalproject-doctav\Conference\Conference.Service\bin\Debug\netstandard2.0\Conference.Data.pdb
 F:\Conference\finalproject-doctav\Conference\Conference.Service\bin\Debug\netstandard2.0\Conference.Domain.pdb
 F:\Conference\finalproject-doctav\Conference\Conference.Service\obj\Debug\netstandard2.0\Conference.Service.csprojAssemblyReference.cache
-F:\Conference\finalproject-doctav\Conference\Conference.Service\obj\Debug\netstandard2.0\Conference.Service.csproj.CoreCompileInputs.cache
 F:\Conference\finalproject-doctav\Conference\Conference.Service\obj\Debug\netstandard2.0\Conference.Service.AssemblyInfoInputs.cache
 F:\Conference\finalproject-doctav\Conference\Conference.Service\obj\Debug\netstandard2.0\Conference.Service.AssemblyInfo.cs
 F:\Conference\finalproject-doctav\Conference\Conference.Service\obj\Debug\netstandard2.0\Conference.Service.csproj.CopyComplete
