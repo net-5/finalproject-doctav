@@ -15,7 +15,7 @@
             <div class="col-md-4 col-4">
                 <div class="items">
                     <div class="details">
-                        <a asp-controller="Speakers" asp-action="Details" asp-route-id="@item.Id">@item.FirstName @item.LastName</a>
+                        <a class="tavyType" asp-controller="Speakers" asp-action="Details" asp-route-id="@item.Id">@item.FirstName @item.LastName</a>
                     </div>
                     @if (@item.FirstName == "AAAA" && @item.LastName == "BB")
                     {
