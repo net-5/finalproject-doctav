@@ -1,14 +1,51 @@
 ﻿@model IEnumerable<Conference.Domain.Entities.Sponsors>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index of sponsors - by Tavy";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" type="text/css" href="~/css/sponsors.css" />
+<div>
+    <h1>Our sponsors - by Tavy</h1>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<p></p>
+
+<h2>Our active sponsors</h2>
+<div class="sponsorCategory">
+    @foreach (var item in Model)
+    {
+        if (item.Active == true)
+        {
+            <div class="sponsor">
+                <p class="sponsorName"> @item.Name</p>
+                <p class="sponsorDescription">@item.Description</p>
+            </div>
+        }
+    }
+</div>
+
+<br />
+<br />
+
+<h2>Our inactive sponsors</h2>
+<div class="sponsorCategory">
+    @foreach (var item in Model)
+    {
+        if (item.Active == false)
+        {
+            <div class="sponsor">
+                <p class="sponsorName"> @item.Name</p>
+                <p class="sponsorDescription">@item.Description</p>
+                <p class="sponsorEdition">Edition: @item.Edition</p>
+                <p>-----------</p>
+            </div>
+            <br />
+        }
+    }
+</div>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -43,41 +80,42 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Website)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Facebook)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PageSlug)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SponsorTypeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Edition)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Website)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Facebook)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PageSlug)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SponsorTypeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Edition)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

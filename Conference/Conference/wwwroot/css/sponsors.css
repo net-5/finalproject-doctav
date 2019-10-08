@@ -1,0 +1,29 @@
+﻿body {
+    background-color: #442359;
+}
+
+h1 {
+    text-align: center;
+    color: aqua;
+}
+
+h2 {
+    background-color: blueviolet;
+    text-emphasis: dot;
+    color: yellow;
+}
+
+.sponsorName {
+    color: brown;
+    font-weight:bold;
+}
+
+.sponsorDescription, .sponsorEdition {
+    font-weight: bold;
+    color: burlywood;
+}
+
+
+.sponsor {
+    border: groove;
+}
