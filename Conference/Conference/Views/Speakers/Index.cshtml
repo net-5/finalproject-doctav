@@ -1,30 +1,42 @@
 ﻿@model IEnumerable<Conference.Domain.Entities.Speakers>
 
-    @{
+@{
     ViewData["Title"] = "Index";
-    }
-    <link rel="stylesheet" type="text/css" href="~/css/speakers.css" />
+}
+<link rel="stylesheet" type="text/css" href="~/css/speakers.css" />
 
-    <h1>:) Our speakers</h1>
+<h1>:) Our speakers</h1>
 
 
-    <div class="container">
-        <div class="row">
-            @foreach(var item in Model)
-    {
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
             <div class="col-md-4 col-4">
                 <div class="items">
                     <div class="details">
                         <a asp-controller="Speakers" asp-action="Details" asp-route-id="@item.Id">@item.FirstName @item.LastName</a>
                     </div>
-                    @if(@item.FirstName=="XX" && @item.LastName=="YY")
-                {
-                    <img class="photo" src="~/images/speaker1.jpg" />
-                }
+                    @if (@item.FirstName == "AAAA" && @item.LastName == "BB")
+                    {
+                        <img class="photo" src="~/images/alex-thissen.png" />
+                    }
+                    @if (@item.FirstName == "XX" && @item.LastName == "YY")
+                    {
+                        <img class="photo" src="~/images/alex-thissen.png" />
+                    }
+                    @if (@item.FirstName == "Johnny" && @item.LastName == "Brava")
+                    {
+                        <img class="photo" src="~/images/alex-thissen.png" />
+                    }
+                    @if (@item.FirstName == "ZZ" && @item.LastName == "DD")
+                    {
+                        <img class="photo" src="~/images/alex-thissen.png" />
+                    }
                 </div>
             </div>
-    }
-        </div>
+        }
     </div>
+</div>
 
 
