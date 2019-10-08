@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #442359;
+    background-color: #fff;
 }
 
 h1 {
@@ -8,6 +8,15 @@ h1 {
 }
 
 h2 {
+    font-size: 5.6rem;
+    font-weight: 600;
+    line-height: 6.6rem;
+    color: #442359;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.title {
     background-color: blueviolet;
     text-emphasis: dot;
     color: yellow;
