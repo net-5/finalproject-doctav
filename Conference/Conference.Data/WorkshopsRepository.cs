@@ -1,4 +1,5 @@
 ﻿using Conference.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,7 @@ namespace Conference.Data
 
         public List<Workshops> GetAllWorkshops()
         {
-            return conferenceContext.Workshops.ToList();
+            return conferenceContext.Workshops.Include(x=>x.Speaker).ToList();
         }
 
         public Workshops GetWorkShopById(int id)
