@@ -1,0 +1,39 @@
+﻿body {
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: aqua;
+}
+
+h2 {
+    font-size: 5.6rem;
+    font-weight: 600;
+    line-height: 6.6rem;
+    color: #442359;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.title {
+    background-color: blueviolet;
+    text-emphasis: dot;
+    color: yellow;
+}
+
+.sponsorName {
+    color: brown;
+    font-weight:bold;
+}
+
+.sponsorDescription, .sponsorEdition {
+    font-weight: bold;
+    color: burlywood;
+}
+
+
+.sponsor {
+    border: groove;
+    background-color: #ffffb3;
+}

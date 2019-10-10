@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Conference.Domain.Entities.Sponsors>
+
+@{
+    ViewData["Title"] = "Index of sponsors - by Tavy";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/sponsors.css" />
+
+
+<p></p>
+
+<h2>Our active sponsors</h2>
+<div class="sponsorCategory">
+    @foreach (var item in Model)
+    {
+        if (item.Active == true)
+        {
+            <div class="sponsor">
+                <p class="sponsorName"> @item.Name</p>
+                <p class="sponsorDescription">@item.Description</p>
+            </div>
+        }
+    }
+</div>
+
+<br />
+<br />
+
+<h2>Our inactive sponsors</h2>
+<div class="sponsorCategory">
+    @foreach (var item in Model)
+    {
+        if (item.Active == false)
+        {
+            <div class="sponsor">
+                <p class="sponsorName"> @item.Name</p>
+                <p class="sponsorDescription">@item.Description</p>
+                <p class="sponsorEdition">Edition: @item.Edition</p>
+                <p>-----------</p>
+            </div>
+            <br />
+        }
+    }
+</div>
+

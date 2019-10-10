@@ -1,0 +1,19 @@
+﻿body {
+    background-color: blue;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tavyType {
+    color:yellow;
+}

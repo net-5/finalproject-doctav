@@ -1,0 +1,38 @@
+﻿body {
+    background-color: blueviolet;
+}
+
+.conferintaTavy {
+    background-color: blueviolet;
+}
+
+.workshopNameTavy {
+    font-size: 40px;
+    font-family:Algerian;
+    color:antiquewhite;
+}
+
+.workshopDescriptionTavy {
+    font-size:60px;
+    font-family:Broadway;
+}
+
+.workshopSpeakerTavy {
+    font-size:30px;
+    color:brown;
+}
+
+.workshopSpeakerLinkTavy {
+    text-align:center;
+}
+
+.aTavy {
+    font-size: 25px;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

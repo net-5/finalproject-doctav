@@ -1,0 +1,52 @@
+﻿@model Conference.Domain.Entities.Speakers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/speakers.css" />
+
+<div class="row">
+
+    <div class="col-xs-12 col-md-2 offset-md-2 space-big space">
+        <div>
+            <img class="img-responsive img-fluid" src="https://dndays.blob.core.windows.net/img/91/alex-thissen-small.png" alt="Alternate Text">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-5 space-big space">
+        <h1 class="title">@Model.FirstName @Model.LastName</h1>
+        <h2 class="subtitle blue ">@Model.Position</h2>
+        <span class="subtitle blue">
+            @Model.Skype
+        </span>
+        <div class="speaker-socials blue">
+            <ul>
+                <li>
+                    <a target="_blank" class="link d-inline" href="https://twitter.com/alexthissen">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="text">
+            <p>@Model.FirstName @Model.LastName</p>
+            <p>@Model.Description</p>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-3 bg-mv text-center space">
+
+
+        <div class="talk-title white text-left">
+
+
+        </div>
+
+        <div style="height:15rem"></div>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to our speakers list</a>
+</div>
